@@ -18,18 +18,17 @@ local GlobalSettingUIBlur = Window:GlobalSetting({
         Window:SetAcrylicBlurState(enabled)
     end
 })
+Window:SetAcrylicBlurState(GlobalSettingUIBlur.Default)
 
 local GlobalSettingShowUser = Window:GlobalSetting({
     Name = "Show User Info",
-    Default = enabled,
+    Default = true,
     Callback = function(disabled)
         Window:SetUserInfoState(disabled)
     end
 })
-
-Window:SetAcrylicBlurState(GlobalSettingUIBlur.Default)
-
 Window:SetUserInfoState(GlobalSettingShowUser.Default)
+
 
 local MainGroup = Window:TabGroup({
     Name = "MainGroup"
