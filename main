@@ -22,13 +22,22 @@ Window:SetAcrylicBlurState(GlobalSettingUIBlur.Default)
 
 local GlobalSettingShowUser = Window:GlobalSetting({
     Name = "Show User Info",
-    Default = false,
-    Callback = function(enabled)
-        Window:SetUserInfoState(enabled)
+    Default = true,
+    Callback = function(disabled)
+        Window:SetUserInfoState(disabled)
     end
 })
 Window:SetUserInfoState(GlobalSettingShowUser.Default)
 
+local GlobalSettingKeybind = Window:GlobalSetting({
+    Name = "Keybind",
+    Default = Enum.KeyCode.RightControl,
+    Callback = function(keybind)
+        Window:SetKeybind(keybind)
+    end
+})
+
+window:SetKeybind(GlobalSettingKeybind.Default)
 
 local MainGroup = Window:TabGroup({
     Name = "MainGroup"
