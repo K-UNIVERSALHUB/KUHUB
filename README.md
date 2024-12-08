@@ -1,7 +1,7 @@
 
 # K'S UNIVERSAL HUB
 
-### 🚧 V0.2.0 Alpha | No changes are final. 🚧
+### 🚧 V0.2.0 Alpha --- No changes are final. 🚧
 
 
 
