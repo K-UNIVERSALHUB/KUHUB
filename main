@@ -3,7 +3,7 @@ local MacLib: any = loadstring(game:HttpGet("https://github.com/biggaboy212/Macl
 local Window = MacLib:Window({
     Title = "K Universal HUB",
     Subtitle = "Made with ❤️ by @KingLuc | V0.1.23",
-    Size = UDim2.fromOffset(800, 325),
+    Size = UDim2.fromOffset(700, 400),
     DragStyle = 2,
     DisabledWindowControls = {},
     ShowUserInfo = true,
@@ -28,16 +28,6 @@ local GlobalSettingShowUser = Window:GlobalSetting({
     end
 })
 Window:SetUserInfoState(GlobalSettingShowUser.Default)
-
-local GlobalSettingKeybind = Window:GlobalSetting({
-    Name = "Keybind",
-    Default = Enum.KeyCode.RightControl,
-    Callback = function(keybind)
-        Window:SetKeybind(keybind)
-    end
-})
-
-window:SetKeybind(GlobalSettingKeybind.Default)
 
 local MainGroup = Window:TabGroup({
     Name = "MainGroup"
