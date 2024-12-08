@@ -21,7 +21,7 @@ local GlobalSettingUIBlur = Window:GlobalSetting({
 
 local GlobalSettingShowUser = Window:GlobalSetting({
     Name = "Show User Info",
-    Default = true,
+    Default = enabled,
     Callback = function(disabled)
         Window:SetUserInfoState(disabled)
     end
