@@ -23,8 +23,8 @@ Window:SetAcrylicBlurState(GlobalSettingUIBlur.Default)
 local GlobalSettingShowUser = Window:GlobalSetting({
     Name = "Show User Info",
     Default = true,
-    Callback = function(disabled)
-        Window:SetUserInfoState(disabled)
+    Callback = function(enabled)
+        Window:SetUserInfoState(enabled)
     end
 })
 Window:SetUserInfoState(GlobalSettingShowUser.Default)
