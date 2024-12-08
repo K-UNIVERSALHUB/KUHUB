@@ -27,7 +27,7 @@ local GlobalSettingShowUser = Window:GlobalSetting({
         Window:SetUserInfoState(disabled)
     end
 })
-Window:SetUserInfoState(GlobalSettingShowUser.Default)
+Window:SetUserInfoState(true)
 
 
 local MainGroup = Window:TabGroup({
