@@ -19,6 +19,14 @@ local GlobalSettingUIBlur = Window:GlobalSetting({
     end
 })
 
+local GlobalSettingUIBlur = Window:GlobalSetting({
+    Name = "Test",
+    Default = false,
+    Callback = function(enabled)
+        Window:SetAcrylicBlurState(enabled)
+    end
+})
+
 Window:SetAcrylicBlurState(GlobalSettingUIBlur.Default)
 
 local MainGroup = Window:TabGroup({
@@ -40,7 +48,7 @@ MainSection:Button({
 
 local RTSTab = MainGroup:Tab({
     Name = "Roblox Talent Show",
-    Image = "rbxassetid://133278050769920"
+    Image = "rbxassetid://89056784404795"
 })
 
 local RTSSection = RTSTab:Section({
@@ -53,6 +61,7 @@ RTSSection:Button({
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(120.301392, 148.144531, -588.02478, -0.992546082, 0.073903434, -0.0969047248, 7.48791606e-09, 0.795149803, 0.606413066, 0.12186978, 0.601892948, -0.789222836)
     end
 })
+
 RTSSection:Button({
     Name = "Stage Left Side (Low-Risk)",
     Callback = function()
