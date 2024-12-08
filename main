@@ -24,10 +24,10 @@ local GlobalSettingShowUser = Window:GlobalSetting({
     Name = "Show User Info",
     Default = true,
     Callback = function(disabled)
-        Window:SetShowUserInfoState(disabled)
+        Window:SetUserInfoState(disabled)
     end
 })
-Window:SetShowUserInfoState(GlobalSettingShowUser.Default)
+Window:SetUserInfoState(GlobalSettingShowUser.Default)
 
 local MainGroup = Window:TabGroup({
     Name = "MainGroup"
@@ -70,7 +70,7 @@ RTSSection:Button({
 })
 
 local DebugTab = MainGroup:Tab({
-    Name = "Main",
+    Name = "Debug",
     Image = "rbxassetid://104586685999145"
 })
 
