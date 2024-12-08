@@ -24,10 +24,10 @@ local GlobalSettingShowUser = Window:GlobalSetting({
     Name = "Show User Info",
     Default = true,
     Callback = function(disabled)
-        Window:SetUserInfoState(disabled)
+        Window:SetShowUserInfoState(disabled)
     end
 })
-Window:SetUserInfoState(GlobalSettingShowUser.Default)
+Window:SetShowUserInfoState(GlobalSettingShowUser.Default)
 
 local MainGroup = Window:TabGroup({
     Name = "MainGroup"
