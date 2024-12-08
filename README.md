@@ -10,7 +10,7 @@
 **❗)ㅤShould work on most executors**
 
 ```lua
-loadstring(game:HttpGet("https://raw.githubusercontent.com/K-UNIVERSALHUB/KUHUB/refs/heads/main/main))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/K-UNIVERSALHUB/KUHUB/main/main"))()
 ```
     
 ## 📸ㅤImage(s)
