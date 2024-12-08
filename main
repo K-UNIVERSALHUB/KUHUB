@@ -19,15 +19,17 @@ local GlobalSettingUIBlur = Window:GlobalSetting({
     end
 })
 
-local GlobalSettingUIBlur = Window:GlobalSetting({
-    Name = "Test",
-    Default = false,
-    Callback = function(enabled)
-        Window:SetAcrylicBlurState(enabled)
+local GlobalSettingShowUser = Window:GlobalSetting({
+    Name = "Show User Info",
+    Default = true,
+    Callback = function(disabled)
+        Window:SetUserInfoState(disabled)
     end
 })
 
 Window:SetAcrylicBlurState(GlobalSettingUIBlur.Default)
+
+Window:SetUserInfoState(GlobalSettingShowUser.Default)
 
 local MainGroup = Window:TabGroup({
     Name = "MainGroup"
@@ -48,7 +50,7 @@ MainSection:Button({
 
 local RTSTab = MainGroup:Tab({
     Name = "Roblox Talent Show",
-    Image = "rbxassetid://89056784404795"
+    Image = "rbxassetid://123340523491139"
 })
 
 local RTSSection = RTSTab:Section({
